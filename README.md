@@ -21,7 +21,7 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
 
 #### 1.3）文件格式
 
-##### 1.3.1）示例
+##### 1.3.1）结构示例
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> <!--表示该文件使用 XML 1.0 标准并采用 UTF-8 编码。-->
 

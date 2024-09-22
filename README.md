@@ -150,11 +150,16 @@
 
 #### 2.2）Device:
 
-- 放置启动文件（startup_device.s）、系统文件（system_device.c system_device.h）、寄存器文件（device.h）等文件
+- 放置启动文件（startup_device.s）、系统文件（system_device.c system_device.h）、寄存器文件（device.h）等文件。
 
 ![loading](asset/device.png "device")
 
-##### 2.2.1）功能：
+##### 2.2.1）startup_device.s：
+
+
+##### 2.2.2）system_device.c：
+##### 2.2.3）system_device.h：
+##### 2.2.4）device.h：
 
 - 包含对设备寄存器、位域、内存地址等详细的定义。
 

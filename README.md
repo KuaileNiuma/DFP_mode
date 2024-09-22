@@ -140,3 +140,9 @@
 ```
 </details>
 </details>
+### 2） DFP文件结构
+<details>
+- 示例结构如下图
+![loading](asset/struct.png "示例结构")
+
+</details>

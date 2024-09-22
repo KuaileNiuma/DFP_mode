@@ -50,6 +50,8 @@
 </package>
 ```
 ##### 1.3.2）关键部分示例：
+<details>
+  
 - 在下面的部分中，将为来自设备供应商MyVendor的虚拟设备族MVCM3创建DFP。
 - 设备族由四个成员组成，分为两个子族。
 - mvcm3系列的规格如下:  
@@ -136,4 +138,5 @@
     </component>
 </components>
 ```
+</details>
 </details>

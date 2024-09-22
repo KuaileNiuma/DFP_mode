@@ -66,8 +66,8 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
 #### ```xml<keywords></keywords>```
 搜索的关键词
 
-#### j. <devices></devices>
-                示例：
+#### <devices></devices>
+```xml
                 <devices>
                     <family Dfamily="MVCM3 Series" Dvendor="Generic:5">
                     <processor Dcore="Cortex-M3" DcoreVersion="r2p1" Dfpu="0" Dmpu="0" Dendian="Little-endian"/>
@@ -104,9 +104,9 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
                     </subFamily>
                     </family>
                 </devices>
-
-#### k. <conditions></conditions>
-                示例：
+```
+#### <conditions></conditions>
+```xml
                 <conditions>
                     <condition id="MVCM3 CMSIS-Core">
                     <!-- conditions selecting Devices -->
@@ -130,9 +130,9 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
                     <require Tcompiler="IAR"/>
                     </condition>
                 </conditions>
-                
-#### m. <components></components>
-                示例：
+```                
+#### <components></components>
+```xml
                 <components>
                     <component Cclass="Device" Cgroup="Startup" Cversion="0.0.1" condition="MVCM3 CMSIS-Core">
                     <description>System Startup for MyVendor MVCM3 Series</description>
@@ -146,3 +146,4 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
                     </files>
                     </component>
                 </components>
+```

@@ -162,7 +162,7 @@
 
 </details>
 
-### 3） 生成pack
+### 3） 生成PACK
 <details>
 
 #### 3.1）gen_pack.sh脚本的使用 

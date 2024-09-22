@@ -7,7 +7,6 @@
 
 ### 1） .PDSC 文件
 <details>
-  
 #### 1.0）介绍
 
 - CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核心文件，用于描述和定义一个设备家族包（DFP, Device Family Pack）或其他软件包的内容和结构。

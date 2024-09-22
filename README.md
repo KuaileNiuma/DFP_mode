@@ -1,4 +1,4 @@
-# DFP_mode
+# DFP_Mode
 - 下面展示的样例来自于Keil的官方文档
 
 

@@ -165,6 +165,6 @@
 ### 3） 生成pack
 <details>
 
-  - gen_pack.sh脚本的使用 
+#### 3.1）gen_pack.sh脚本的使用 
 
 </details>

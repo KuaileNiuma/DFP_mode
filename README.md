@@ -1,5 +1,7 @@
 # DFP_mode
 - 下面展示的样例来自于Keil的官方文档
+
+<details>
   
 ## DFP 的创建
 
@@ -133,3 +135,4 @@
     </component>
 </components>
 ```
+</details>

@@ -25,18 +25,19 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> <!--表示该文件使用 XML 1.0 标准并采用 UTF-8 编码。-->
 <package schemaVersion="1.4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
-    <vendor></vendor>
-    <name></name>
-    <url></url>
-    <description></description>
-    <supportContact></supportContact>
-    <license>Docs/license.txt</license> 
+<!--定义整个软件包；指定该 .pdsc 文件所遵循的 CMSIS Pack 描述文件的架构版本；根据URL和PACK.xsd验证XML文档结构是否符合规范-->
+    <vendor></vendor>                   <!--供应商-->
+    <name></name>                       <!--家族名-->
+    <url></url>                         <!--定义包的下载路径（若为空则Pack Installer显示Offline）-->
+    <description></description>         <!--描述-->
+    <supportContact></supportContact>   <!--联系方式联系方式-->
+    <license>Docs/license.txt</license> <!--许可文件-->
 
-    <releases></releases>
-    <keywords></keywords>
-    <devices></devices>
-    <conditions></conditions>
-    <components></components>
+    <releases></releases>               <!--发行的版本日期等信息-->
+    <keywords></keywords>               <!--搜索用关键词-->
+    <devices></devices>                 <!---->
+    <conditions></conditions>           <!---->
+    <components></components>           <!---->
 </package>
 ```
 ### 1.3.2）解释：

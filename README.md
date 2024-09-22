@@ -43,23 +43,30 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
 ### 1.3.2）解释：
 #### a.
 ```xml<?xml version="1.0" encoding="UTF-8"?>```
-- 表示该文件使用 XML 1.0 标准并采用 UTF-8 编码。
-#### b. <package schemaVersion="1.4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
-                    定义整个软件包；指定该 .pdsc 文件所遵循的 CMSIS Pack 描述文件的架构版本；根据URL和PACK.xsd验证XML文档结构是否符合规范
+表示该文件使用 XML 1.0 标准并采用 UTF-8 编码。
+#### b. 
+```xml<package schemaVersion="1.4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">```
+定义整个软件包；指定该 .pdsc 文件所遵循的 CMSIS Pack 描述文件的架构版本；根据URL和PACK.xsd验证XML文档结构是否符合规范
                 
-#### c. <vendor></vendor>  <name></name>
-                填入供应商和家族名
+#### c. 
+```xml<vendor></vendor>  <name></name>```
+填入供应商和家族名
             
-#### d. <url></url>
-                    定义包的下载路径（若为空则Pack Installer显示Offline）
-#### e. <supportContact></supportContact>
-                    联系方式
-#### f. <license></license>
-                    许可文件
-#### h. <releases></releases>
-                    发行的版本日期等信息
-#### i. <keywords></keywords>
-                    搜索的关键词
+#### d. 
+```xml<url></url>```
+定义包的下载路径（若为空则Pack Installer显示Offline）
+#### e. 
+```xml<supportContact></supportContact>```
+联系方式
+#### f. 
+```xml<license></license>```
+许可文件
+#### h. 
+```xml<releases></releases>```
+发行的版本日期等信息
+#### i. 
+```xml<keywords></keywords>```
+搜索的关键词
 
 #### j. <devices></devices>
                 示例：

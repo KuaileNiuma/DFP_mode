@@ -46,7 +46,7 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
 ```
 #### 1.3.2）关键部分解释：
 
-- 设备信息
+- 设备信息（devices）
 ```xml
 <devices>
     <family Dfamily="MVCM3 Series" Dvendor="Generic:5">
@@ -85,7 +85,7 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
     </family>
 </devices>
 ```
-#### <conditions></conditions>
+- 条件（conditions）
 ```xml
 <conditions>
     <condition id="MVCM3 CMSIS-Core">
@@ -111,7 +111,7 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
     </condition>
 </conditions>
 ```                
-#### <components></components>
+- 组件（components）
 ```xml
 <components>
     <component Cclass="Device" Cgroup="Startup" Cversion="0.0.1" condition="MVCM3 CMSIS-Core">

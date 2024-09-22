@@ -161,3 +161,10 @@
 ![loading](asset/svd.png "svd")
 
 </details>
+
+### 3） 生成pack
+<details>
+
+  - gen_pack.sh脚本的使用 
+
+</details>

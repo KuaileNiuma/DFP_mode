@@ -42,7 +42,7 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
 ```
 ### 1.3.2）解释：
 
-#### ```xml<?xml version="1.0" encoding="UTF-8"?>``` 
+#### - ```xml<?xml version="1.0" encoding="UTF-8"?>``` 
 表示该文件使用 XML 1.0 标准并采用 UTF-8 编码。
 
 #### ```xml<package schemaVersion="1.4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">```

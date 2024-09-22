@@ -44,9 +44,9 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
 
 </package>
 ```
-### 1.3.2）关键部分解释：
+#### 1.3.2）关键部分解释：
 
-#### <devices></devices>
+- 设备信息
 ```xml
 <devices>
     <family Dfamily="MVCM3 Series" Dvendor="Generic:5">

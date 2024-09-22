@@ -150,8 +150,14 @@
 
 #### 2.2）Device:
 
+![loading](asset/device.png "device")
+
 #### 2.3）Flash:
 
+![loading](asset/flash.png "flash")
+
 #### 2.4）SVD:
+
+![loading](asset/svd.png "svd")
 
 </details>

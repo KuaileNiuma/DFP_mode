@@ -1,4 +1,4 @@
-# DFP_mode
+# DFP_Mode
 - 下面展示的样例来自于Keil的官方文档
 
 
@@ -139,4 +139,19 @@
 </components>
 ```
 </details>
+</details>
+
+### 2） DFP文件结构  
+<details>  
+
+#### 2.1）示例结构如下图：
+  
+![loading](asset/struct.png "示例结构")
+
+#### 2.2）Device:
+
+#### 2.3）Flash:
+
+#### 2.4）SVD:
+
 </details>

@@ -1,12 +1,13 @@
 # DFP_mode
 - 下面展示的样例来自于Keil的官方文档
 
-<details>
+
   
 ## DFP 的创建
 
 ### 1） .PDSC 文件
-
+<details>
+  
 #### 1.0）介绍
 
 - CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核心文件，用于描述和定义一个设备家族包（DFP, Device Family Pack）或其他软件包的内容和结构。

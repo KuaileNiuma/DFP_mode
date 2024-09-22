@@ -2,7 +2,7 @@
 
 ## DFP 的创建
 
-### 1） .pdsc 文件
+### 1） .PDSC 文件
 
 #### 1.0）介绍
 
@@ -39,7 +39,7 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
     <conditions></conditions>
     <components></components>
 </package>
-
+```
 ### 1.3.2）解释：
 #### a. <?xml version="1.0" encoding="UTF-8"?>
                     表示该文件使用 XML 1.0 标准并采用 UTF-8 编码。

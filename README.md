@@ -48,7 +48,7 @@ CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核
 ##### 1.3.2）关键部分示例：
 - 在下面的部分中，将为来自设备供应商MyVendor的虚拟设备族MVCM3创建DFP。
 - 设备族由四个成员组成，分为两个子族。
-- mvcm3系列的规格如下:
+- mvcm3系列的规格如下:  
 ![loading](asset/MVCM3.png "官方示例")
 
 - 设备信息（devices）

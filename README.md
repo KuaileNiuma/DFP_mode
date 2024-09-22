@@ -1,46 +1,45 @@
 # DFP_mode
-My understanding of creating DFP
 
-DFP的创建
+## DFP 的创建
 
-# 1） .pdsc文件
-## 1.0）介绍
-        CMSIS Pack 描述文件（Pack Description File），它是 CMSIS-Pack 系统中的核心文件。
-        用于描述和定义一个设备家族包（DFP, Device Family Pack）或其他软件包的内容和结构。
-        .pdsc 文件通过 XML 格式来表达，它包含关于设备、组件、库、驱动程序、示例代码等的信息，并为开发工具（如 Keil MDK、IAR 等）提供用于集成和管理这些资源的元数据。
-## 1.1）参考文档
-        1.1.1.https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/cp_SWComponents.html
-        1.1.2.https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/createPack_DFP.html#:~:text=A%20Software%20Pack%20that%20contains%20a%20%3Cdevices%3E%20element,device%20or%20a%20device%20family%20in%20more%20det##
-## 1.2）命名格式
-        Vendor.Name.pdsc
-        Vendor为供应商名，在PACK.xsd中有登记，开发过程中使用“Generic:5”代替
-        Name为家族名，某芯片如MVCM3包括MVCM3100，MVCM3200，则Name为MVCM3
-## 1.3）文件格式
-### 1.3.1）示例：
-            <?xml version="1.0" encoding="UTF-8"?>
-            <package schemaVersion="1.4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
-                <vendor></vendor>
-                <name></name>
-                <url></url>
-                <description></description>
-                <supportContact></supportContact>
-                <license>Docs/license.txt</license> 
+### 1） .pdsc 文件
 
-                <releases>
-                </releases>
+#### 1.0）介绍
 
-                <keywords>
-                </keywords>
+CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核心文件，用于描述和定义一个设备家族包（DFP, Device Family Pack）或其他软件包的内容和结构。它通过 XML 格式来表达，包含关于设备、组件、库、驱动程序、示例代码等的信息，并为开发工具（如 Keil MDK、IAR 等）提供用于集成和管理这些资源的元数据。
 
-                <devices>
-                </devices>
+#### 1.1）参考文档
 
-                <conditions>
-                </conditions>
+- [CMSIS-Pack Components Documentation](https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/cp_SWComponents.html)
+- [CMSIS-Pack DFP Creation Guide](https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/createPack_DFP.html#:~:text=A%20Software%20Pack%20that%20contains%20a%20%3Cdevices%3E%20element,device%20or%20a%20device%20family%20in%20more%20detail.)
 
-                <components>
-                </components>
-            </package>
+#### 1.2）命名格式
+
+- `Vendor.Name.pdsc`
+- `Vendor` 为供应商名，在 `PACK.xsd` 中有登记，开发过程中使用“Generic:5”代替。
+- `Name` 为家族名，如芯片 MVCM3 包含 MVCM3100 和 MVCM3200，则 `Name` 为 MVCM3。
+
+#### 1.3）文件格式
+
+##### 1.3.1）示例
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<package schemaVersion="1.4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+    <vendor></vendor>
+    <name></name>
+    <url></url>
+    <description></description>
+    <supportContact></supportContact>
+    <license>Docs/license.txt</license> 
+
+    <releases></releases>
+    <keywords></keywords>
+    <devices></devices>
+    <conditions></conditions>
+    <components></components>
+</package>
+
 ### 1.3.2）解释：
 #### a. <?xml version="1.0" encoding="UTF-8"?>
                     表示该文件使用 XML 1.0 标准并采用 UTF-8 编码。

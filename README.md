@@ -190,7 +190,7 @@
   - 为工具提供必要的元数据，以便在进行 Flash 操作（如擦除、编程、读取）时，能够正确处理设备的存储布局。
   - 示例如下：
   - ```xml
-        struct FlashDevice const FlashDevice  =  {
+    struct FlashDevice const FlashDevice  =  {
        FLASH_DRV_VERS,             // 驱动版本
        "Example Flash",            // 设备名称
        ONCHIP,                     // 设备类型（片上 Flash）
@@ -206,8 +206,7 @@
        {{ 0x08000000, 0x1000 },    // 每个扇区 4KB
         { 0x08010000, 0x20000 },   // 每个扇区 128KB
         SECTOR_END }
-    };
-  - ```
+    };```
 
 ##### 2.3.3）修改FlashPrg.c：  
 ##### 2.3.4）生成FLM：  

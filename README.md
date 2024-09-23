@@ -308,6 +308,8 @@
 </details>
 
 ### 3） 生成PACK
+<details>
+
 - 脚本介绍：
   - 检查PDSC文件的可用性、复制PDSC文件到文件目录、在文件目录运行PackChk.exe、在工作目录创建一个包文件。它会被称为Vendor.Device.Version.pack
 - 具体步骤：
@@ -315,3 +317,5 @@
   - 2）完善dpsc文件的内容
   - 3）修改gen_pack.sh内的部分内容（具体脚本中有解释）
   - 4）运行脚本（使用git bash打开dfp文件夹并在运行脚本）
+
+</details>

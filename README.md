@@ -175,6 +175,9 @@
 
 - 定义设备的外设寄存器映射、位域、内存地址等内容，使开发者可以通过结构体和宏访问设备外设。
 - 可以通过CMSIS提供的SVDConv工具依据你的SVD文件直接生成
+- SVDConv的使用：
+  - SVDConv ARM_Example.svd --generate=header --fields=struct
+
 
 #### 2.3）Flash:
 - 参考文档：

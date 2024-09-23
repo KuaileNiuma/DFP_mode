@@ -256,8 +256,12 @@
   ![loading](asset/flash2.png "flash2")
 - 3）编译
 - 4）在PDSC文件中添加FLM文件的路径,如下：
-```c
-<algorithm name="Flash/MVCM3XXX_16.FLM" start="0x00000000" size="0x4000" default="1"/>
+```xml
+<device Dname="MVCM3110">
+  <algorithm name="Flash/MVCM3.FLM" start="0x00000000" size="0x4000" default="1"/>
+  <memory     name="IROM1"  access="rx"       start="0x00000000"  size="0x4000"     startup="1"   default="1"/>
+  <memory     name="IRAM1"  access="rw"       start="0x20000000"  size="0x0800"     init   ="0"   default="1"/>
+</device>
 ``` 
 - 5）重新生成pack并导入，在对应的工程中可以看到
   ![loading](asset/flash3.png "flash3")

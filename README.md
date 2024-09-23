@@ -284,7 +284,7 @@
 - 示例：
   <details>
 	```xml
-	    <?xml version="1.0" encoding="utf-8"?>
+	<?xml version="1.0" encoding="utf-8"?>
 	
 	<!-- File naming: <part/series name>.svd -->
 	
@@ -1074,6 +1074,7 @@
 	</device>
 	```
   </details>
+- 参考文档
   - [SVD File Example](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/svd_Example_pg.html) 
 </details>
 

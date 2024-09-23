@@ -171,9 +171,10 @@
 - 定义设备的外设寄存器映射、位域、内存地址等内容，使开发者可以通过结构体和宏访问设备外设。
 
 #### 2.3）Flash:
-- [Flash Programming]
-(https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/flashAlgorithm.html)
-
+- 1）参考文档：
+  - [Flash Programming]
+  - (https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/flashAlgorithm.html)
+- 2）示例：
 ![loading](asset/flash.png "flash")
 
 ##### 2.3.1）操作流程：  

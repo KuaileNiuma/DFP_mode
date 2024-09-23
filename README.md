@@ -279,7 +279,9 @@
   - [System View Description](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/index.html)
 
 ##### 2.4.2）文件格式:
+
 <details>
+  
 - 参考文档：
   - [SVD Description (*.svd) Format](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/svd_Format_pg.html)
   - [/device element](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/elem_device.html)
@@ -293,10 +295,13 @@
   - ![loading](asset/svd0.png "svd0")
   - 外设元素结构
   - ![loading](asset/svd1.png "svd1")
+  
 </details>
 
 ##### 2.4.3）各元素解析:
+
 <details>
+  
 </details>
 
 </details>

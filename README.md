@@ -150,7 +150,7 @@
 
 #### 2.2）Device:
 
-- 介绍：放置启动文件（startup_device.s）、系统文件（system_device.c system_device.h）、寄存器文件（device.h）等文件。
+- 介绍：放置启动文件（startup_device.s）、系统文件（system_device.c system_device.h）、寄存器文件（device.h）以及库函数等文件。
 - 示例：
   
   ![loading](asset/device.png "device")
@@ -173,6 +173,7 @@
 ##### 2.2.4）device.h：
 
 - 定义设备的外设寄存器映射、位域、内存地址等内容，使开发者可以通过结构体和宏访问设备外设。
+- 可以通过CMSIS提供的SVDConv工具依据你的SVD文件直接生成
 
 #### 2.3）Flash:
 - 参考文档：
@@ -268,7 +269,14 @@
 #### 2.4）SVD:
 
 ![loading](asset/svd.png "svd")
-
+##### 2.4.1）介绍:
+- 定义：SVD（System View Description） 文件是 CMSIS（Common Microcontroller Software Interface Standard） 中的定义的一个 XML 格式的纯文本文件，其包含了芯片内核、芯片所具有的外设以及内核和外设的寄存器的完整描述
+- 作用：
+  - 生成头文件（device.h）：使用相关工具命令（SVDConv.exe device.svd -o Output -b Output/device.log --generate=header）就可以根据编写的 SVD 文件直接生成芯片的顶级头文件（device.svd --> device.h）
+  - 调试 ：SVD 文件最主要的目的是调试时直接显示寄存器的每个比特位的状态。
+- 参考文档：
+  - [TIH64 之一 编写 TIH64Vx690 的 SVD 文件及使用 SVD 辅助调试_svd 和 sfr文件的区别](https://blog.csdn.net/zcshoucsdn/article/details/127144450)
+  - [System View Description](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/index.html)
 </details>
 
 ### 3） 生成PACK

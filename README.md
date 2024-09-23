@@ -217,100 +217,31 @@
 - 2）示例：
   ```c
   int Init (unsigned long adr, unsigned long clk, unsigned long fnc) {
-  
-    CacheOpt(0);
-  
-  //  base_adr = adr & ~(BANK1_SIZE - 1);          // Align to Size Boundary
-  
-    // Zero Wait State
-    FLASH->ACR  = 0x00000000;
-  
-    /* Disable Prefetch Buffer */
-    FLASH->ACR &= ~FLASH_ACR_PRFTBE;
-  
-    /* Flash 0 wait state */
-    FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);
-    FLASH->ACR |= (uint32_t)FLASH_ACR_LATENCY_6; 
-  
-    // Unlock Flash    
-    FLASH->KEYR  = FLASH_KEY1;
-    FLASH->KEYR  = FLASH_KEY2;
-  
-    // Test if IWDG is running (IWDG in HW mode)
-    if ((FLASH->OBR & 0x04) == 0x00) {
-      // Set IWDG time out to ~32.768 second
-      IWDG->KR  = 0x5555;                         // Enable write access to IWDG_PR and IWDG_RLR     
-      IWDG->PR  = 0x06;                           // Set prescaler to 256  
-      IWDG->RLR = 4095;                           // Set reload value to 4095
-    }
-  
-    return (0);
+      // 初始化 Flash 编程设置，如地址和时钟频率
+      // 配置寄存器，准备擦除或编程操作
+      return 0;
   }
   
   int UnInit (unsigned long fnc) {
-      
-        // Lock Flash
-        FLASH->CR  |=  FLASH_LOCK;
-      
-        return (0);
-      }
-      int EraseChip (void) {
-    
-      FLASH->CR  |=  FLASH_MER;                     // Mass Erase Enabled
-      FLASH->CR  |=  FLASH_STRT;                    // Start Erase
-    
-      while (FLASH->SR  & FLASH_BSY) {
-        IWDG->KR = 0xAAAA;                          // Reload IWDG
-      }
-    
-      FLASH->CR  &= ~FLASH_MER;                     // Mass Erase Disabled
-    
-      return (0);                                   // Done
-   }
- 
-   int EraseSector (unsigned long adr) {
-    
-        FLASH->CR  |=  FLASH_PER;                   // Page Erase Enabled 
-        FLASH->AR   =  adr;                         // Page Address
-        FLASH->CR  |=  FLASH_STRT;                  // Start Erase
-    
-        while (FLASH->SR  & FLASH_BSY) {
-          IWDG->KR = 0xAAAA;                        // Reload IWDG
-        }
-    
-        FLASH->CR  &= ~FLASH_PER;                   // Page Erase Disabled 
-    
-      return (0);                                   // Done
-   }
-    
-   int ProgramPage (unsigned long adr, unsigned long sz, unsigned char *buf) {
-    
-      sz = (sz + 1) & ~1;                           // Adjust size for Half Words
-      
-        while (sz) {
-    
-          FLASH->CR  |=  FLASH_PG;                  // Programming Enabled
-    
-          M16(adr) = *((unsigned short *)buf);      // Program Half Word
-          while (FLASH->SR  & FLASH_BSY);
-    
-          FLASH->CR  &= ~FLASH_PG;                  // Programming Disabled
-    
-          // Check for Errors
-          if (FLASH->SR  & (FLASH_PGERR | FLASH_WRPRTERR)) {
-            FLASH->SR  |= FLASH_PGERR | FLASH_WRPRTERR;
-            return (1);                             // Failed
-          }
-    
-          // Go to next Half Word
-          adr += 2;
-          buf += 2;
-          sz  -= 2;
-        }
-    
-      return (0);                                   // Done
-   }
-   ```
+      // 反初始化，释放 Flash 资源
+      return 0;
+  }
+
+  int EraseSector (unsigned long adr) {
+      // 擦除指定地址的扇区
+      return 0;
+  }
+  
+  int EraseChip (void) {
+      //擦除整个 Flash 存储器
+      return 0;
+  }
+  
+  int ProgramPage (unsigned long adr, unsigned long sz, unsigned char *buf) {
+      // 将数据写入指定的 Flash 页面
+      return 0;
+  }
+  ```
 ##### 2.3.4）生成FLM：  
 
 #### 2.4）SVD:

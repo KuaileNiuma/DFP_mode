@@ -150,7 +150,9 @@
 
 #### 2.2）Device:
 
-- 放置启动文件（startup_device.s）、系统文件（system_device.c system_device.h）、寄存器文件（device.h）等文件。
+- 介绍：放置启动文件（startup_device.s）、系统文件（system_device.c system_device.h）、寄存器文件（device.h）等文件。
+- 参考文档：
+  -[]() 
 
 ![loading](asset/device.png "device")
 

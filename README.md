@@ -248,69 +248,69 @@
   }
   
   int UnInit (unsigned long fnc) {
-  
-    // Lock Flash
-    FLASH->CR  |=  FLASH_LOCK;
-  
-    return (0);
-  }
-  int EraseChip (void) {
-
-  FLASH->CR  |=  FLASH_MER;                     // Mass Erase Enabled
-  FLASH->CR  |=  FLASH_STRT;                    // Start Erase
-
-  while (FLASH->SR  & FLASH_BSY) {
-    IWDG->KR = 0xAAAA;                          // Reload IWDG
-  }
-
-  FLASH->CR  &= ~FLASH_MER;                     // Mass Erase Disabled
-
-  return (0);                                   // Done
- }
- 
- int EraseSector (unsigned long adr) {
-  
-      FLASH->CR  |=  FLASH_PER;                   // Page Erase Enabled 
-      FLASH->AR   =  adr;                         // Page Address
-      FLASH->CR  |=  FLASH_STRT;                  // Start Erase
-  
-      while (FLASH->SR  & FLASH_BSY) {
-        IWDG->KR = 0xAAAA;                        // Reload IWDG
+      
+        // Lock Flash
+        FLASH->CR  |=  FLASH_LOCK;
+      
+        return (0);
       }
-  
-      FLASH->CR  &= ~FLASH_PER;                   // Page Erase Disabled 
-  
-    return (0);                                   // Done
-  }
-  
-  int ProgramPage (unsigned long adr, unsigned long sz, unsigned char *buf) {
-  
-    sz = (sz + 1) & ~1;                           // Adjust size for Half Words
+      int EraseChip (void) {
     
-      while (sz) {
-  
-        FLASH->CR  |=  FLASH_PG;                  // Programming Enabled
-  
-        M16(adr) = *((unsigned short *)buf);      // Program Half Word
-        while (FLASH->SR  & FLASH_BSY);
-  
-        FLASH->CR  &= ~FLASH_PG;                  // Programming Disabled
-  
-        // Check for Errors
-        if (FLASH->SR  & (FLASH_PGERR | FLASH_WRPRTERR)) {
-          FLASH->SR  |= FLASH_PGERR | FLASH_WRPRTERR;
-          return (1);                             // Failed
-        }
-  
-        // Go to next Half Word
-        adr += 2;
-        buf += 2;
-        sz  -= 2;
+      FLASH->CR  |=  FLASH_MER;                     // Mass Erase Enabled
+      FLASH->CR  |=  FLASH_STRT;                    // Start Erase
+    
+      while (FLASH->SR  & FLASH_BSY) {
+        IWDG->KR = 0xAAAA;                          // Reload IWDG
       }
-  
-    return (0);                                   // Done
-  }
-  ```
+    
+      FLASH->CR  &= ~FLASH_MER;                     // Mass Erase Disabled
+    
+      return (0);                                   // Done
+   }
+ 
+   int EraseSector (unsigned long adr) {
+    
+        FLASH->CR  |=  FLASH_PER;                   // Page Erase Enabled 
+        FLASH->AR   =  adr;                         // Page Address
+        FLASH->CR  |=  FLASH_STRT;                  // Start Erase
+    
+        while (FLASH->SR  & FLASH_BSY) {
+          IWDG->KR = 0xAAAA;                        // Reload IWDG
+        }
+    
+        FLASH->CR  &= ~FLASH_PER;                   // Page Erase Disabled 
+    
+      return (0);                                   // Done
+   }
+    
+   int ProgramPage (unsigned long adr, unsigned long sz, unsigned char *buf) {
+    
+      sz = (sz + 1) & ~1;                           // Adjust size for Half Words
+      
+        while (sz) {
+    
+          FLASH->CR  |=  FLASH_PG;                  // Programming Enabled
+    
+          M16(adr) = *((unsigned short *)buf);      // Program Half Word
+          while (FLASH->SR  & FLASH_BSY);
+    
+          FLASH->CR  &= ~FLASH_PG;                  // Programming Disabled
+    
+          // Check for Errors
+          if (FLASH->SR  & (FLASH_PGERR | FLASH_WRPRTERR)) {
+            FLASH->SR  |= FLASH_PGERR | FLASH_WRPRTERR;
+            return (1);                             // Failed
+          }
+    
+          // Go to next Half Word
+          adr += 2;
+          buf += 2;
+          sz  -= 2;
+        }
+    
+      return (0);                                   // Done
+   }
+   ```
 ##### 2.3.4）生成FLM：  
 
 #### 2.4）SVD:

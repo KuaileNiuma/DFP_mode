@@ -150,7 +150,25 @@
 
 #### 2.2）Device:
 
+- 放置启动文件（startup_device.s）、系统文件（system_device.c system_device.h）、寄存器文件（device.h）等文件。
+
 ![loading](asset/device.png "device")
+
+##### 2.2.1）startup_device.s：
+
+- 设备上电或复位后执行的第一段代码。它负责在硬件复位后初始化堆栈、设置中断向量表、初始化全局和静态变量，并最终跳转到主程序的 main() 函数。
+
+##### 2.2.2）system_device.c：
+
+- 设备初始化的核心文件，负责对系统时钟、外设时钟、内存布局等进行配置。包含了 SystemInit() 函数，该函数在设备启动时被 startup_device.s 调用，进行硬件初始化。
+
+##### 2.2.3）system_device.h：
+
+- 为 system_device.c 中的系统初始化函数提供声明，同时包含一些与系统初始化相关的常量、宏和外部变量声明（如 SystemCoreClock）。
+
+##### 2.2.4）device.h：
+
+- 定义设备的外设寄存器映射、位域、内存地址等内容，使开发者可以通过结构体和宏访问设备外设。
 
 #### 2.3）Flash:
 
@@ -159,5 +177,12 @@
 #### 2.4）SVD:
 
 ![loading](asset/svd.png "svd")
+
+</details>
+
+### 3） 生成PACK
+<details>
+
+#### 3.1）gen_pack.sh脚本的使用 
 
 </details>

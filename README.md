@@ -188,7 +188,7 @@
 - 1）介绍：
   - 定义一个FlashDevice结构体用于描述 Flash 设备的详细特性描述，包括设备的大小、扇区布局、页大小等信息。
   - 为工具提供必要的元数据，以便在进行 Flash 操作（如擦除、编程、读取）时，能够正确处理设备的存储布局。
-  - 示例如下：
+- 2）示例：
   - ```xml
     struct FlashDevice const FlashDevice  =  {
        FLASH_DRV_VERS,             // 驱动版本

@@ -255,7 +255,11 @@
 - 2）将输出文件命名为设备名
   ![loading](asset/flash2.png "flash2")
 - 3）编译
-- 4）重新生成pack并导入，在对应的工程中可以看到
+- 4）在PDSC文件中添加FLM文件的路径,如下：
+```c
+<algorithm name="Flash/MVCM3XXX_16.FLM" start="0x00000000" size="0x4000" default="1"/>
+``` 
+- 5）重新生成pack并导入，在对应的工程中可以看到
   ![loading](asset/flash3.png "flash3")
 #### 2.4）SVD:
 

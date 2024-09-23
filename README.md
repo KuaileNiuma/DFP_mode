@@ -174,6 +174,12 @@
 
 ![loading](asset/flash.png "flash")
 
+##### 2.3.1）来源及修改：  
+
+- 将以下文件复制到你的vendor.device.version/Flash下
+- 位于D:\Keil_v5\Keil_v5\ARM\Flash\_Template路径下（v540版本）
+![loading](asset/flash.png "flash0") 
+
 #### 2.4）SVD:
 
 ![loading](asset/svd.png "svd")

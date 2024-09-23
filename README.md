@@ -283,7 +283,7 @@
   - [SVD Description (*.svd) Format](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/svd_Format_pg.html)
 - 示例：
   <details>
-    ```xml
+```xml
     <?xml version="1.0" encoding="utf-8"?>
 
 <!-- File naming: <part/series name>.svd -->
@@ -1072,7 +1072,7 @@
     </peripheral>
   </peripherals>
 </device>
-    ```
+```
   </details>
   - [SVD File Example](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/svd_Example_pg.html) 
 </details>

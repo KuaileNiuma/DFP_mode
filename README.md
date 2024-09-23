@@ -269,10 +269,10 @@
 </device>
 ``` 
 - 5）重新生成pack并导入，在对应的工程中可以看到
-  ![loading](asset/flash3.png "flash3")
+  ![loading](asset/flash3.png "表示导入成功")
 #### 2.4）SVD:
 
-![loading](asset/svd.png "svd")
+![loading](asset/svd4.png "架构示意图")
 ##### 2.4.1）介绍:
 - 定义：SVD（System View Description） 文件是 CMSIS（Common Microcontroller Software Interface Standard） 中的定义的一个 XML 格式的纯文本文件，其包含了芯片内核、芯片所具有的外设以及内核和外设的寄存器的完整描述
 - 作用：

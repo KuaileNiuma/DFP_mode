@@ -28,6 +28,7 @@ echo $PATH_TO_ADD appended to PATH
 echo " "
 
 # Pack warehouse directory - destination 
+#---# 3.修改pack的输出位置；
 PACK_WAREHOUSE=../output/   
 
 # Temporary pack build directory

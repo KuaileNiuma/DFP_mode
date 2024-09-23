@@ -250,7 +250,13 @@
   }
   ```
 ##### 2.3.4）生成FLM：  
-
+- 1）打开Flash文件夹的工程
+  ![loading](asset/flash1.png "flash1")
+- 2）将输出文件命名为设备名
+  ![loading](asset/flash2.png "flash2")
+- 3）编译
+- 4）重新生成pack并导入，在对应的工程中可以看到
+  ![loading](asset/flash3.png "flash3")
 #### 2.4）SVD:
 
 ![loading](asset/svd.png "svd")

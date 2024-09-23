@@ -154,10 +154,10 @@
 - 参考文档：
   -[]() 
 - 示例：
-![loading](asset/device.png "device")
-![loading](asset/source.png "source")
-![loading](asset/include.png "include")
-![loading](asset/startup.png "startup")
+  ![loading](asset/device.png "device")
+  ![loading](asset/source.png "source")
+  ![loading](asset/include.png "include")
+  ![loading](asset/startup.png "startup")
 
 ##### 2.2.1）startup_device.s：
 

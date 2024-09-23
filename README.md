@@ -176,9 +176,10 @@
 
 ##### 2.3.1）来源及修改：  
 
-- 将以下文件复制到你的vendor.device.version/Flash下
+- 1）将以下文件复制到你的 Vendor.Device.Version/Flash下
+- 一般位于Keil_v5\ARM\Flash\_Template路径下（v540版本）
 ![loading](asset/flash0.png "flash0") 
-- 位于D:\Keil_v5\Keil_v5\ARM\Flash\_Template路径下（v540版本）
+- 2）修改其中的三个工程文件，将“NewDevice”替换为你的设备名
 
 #### 2.4）SVD:
 

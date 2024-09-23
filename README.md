@@ -171,9 +171,9 @@
 - 定义设备的外设寄存器映射、位域、内存地址等内容，使开发者可以通过结构体和宏访问设备外设。
 
 #### 2.3）Flash:
-- 1）参考文档：
+- 参考文档：
   - [Flash Programming](https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/flashAlgorithm.html) 
-- 2）示例：
+- 示例：
 ![loading](asset/flash.png "flash")
 
 ##### 2.3.1）操作流程：  
@@ -213,8 +213,104 @@
 
 ##### 2.3.3）修改FlashPrg.c：  
 - 1）介绍：
-  - 
+  - Keil 环境下的 Flash 编程算法的实现文件，它通过与 Flash 控制器的直接交互来完成擦除、写入、校验等操作。
 - 2）示例：
+  ```c
+  int Init (unsigned long adr, unsigned long clk, unsigned long fnc) {
+  
+    CacheOpt(0);
+  
+  //  base_adr = adr & ~(BANK1_SIZE - 1);          // Align to Size Boundary
+  
+    // Zero Wait State
+    FLASH->ACR  = 0x00000000;
+  
+    /* Disable Prefetch Buffer */
+    FLASH->ACR &= ~FLASH_ACR_PRFTBE;
+  
+    /* Flash 0 wait state */
+    FLASH->ACR &= (uint32_t)((uint32_t)~FLASH_ACR_LATENCY);
+    FLASH->ACR |= (uint32_t)FLASH_ACR_LATENCY_6; 
+  
+    // Unlock Flash    
+    FLASH->KEYR  = FLASH_KEY1;
+    FLASH->KEYR  = FLASH_KEY2;
+  
+    // Test if IWDG is running (IWDG in HW mode)
+    if ((FLASH->OBR & 0x04) == 0x00) {
+      // Set IWDG time out to ~32.768 second
+      IWDG->KR  = 0x5555;                         // Enable write access to IWDG_PR and IWDG_RLR     
+      IWDG->PR  = 0x06;                           // Set prescaler to 256  
+      IWDG->RLR = 4095;                           // Set reload value to 4095
+    }
+  
+    return (0);
+  }
+  
+  int UnInit (unsigned long fnc) {
+  
+    // Lock Flash
+    FLASH->CR  |=  FLASH_LOCK;
+  
+    return (0);
+  }
+  int EraseChip (void) {
+
+  FLASH->CR  |=  FLASH_MER;                     // Mass Erase Enabled
+  FLASH->CR  |=  FLASH_STRT;                    // Start Erase
+
+  while (FLASH->SR  & FLASH_BSY) {
+    IWDG->KR = 0xAAAA;                          // Reload IWDG
+  }
+
+  FLASH->CR  &= ~FLASH_MER;                     // Mass Erase Disabled
+
+  return (0);                                   // Done
+ }
+ 
+ int EraseSector (unsigned long adr) {
+  
+      FLASH->CR  |=  FLASH_PER;                   // Page Erase Enabled 
+      FLASH->AR   =  adr;                         // Page Address
+      FLASH->CR  |=  FLASH_STRT;                  // Start Erase
+  
+      while (FLASH->SR  & FLASH_BSY) {
+        IWDG->KR = 0xAAAA;                        // Reload IWDG
+      }
+  
+      FLASH->CR  &= ~FLASH_PER;                   // Page Erase Disabled 
+  
+    return (0);                                   // Done
+  }
+  
+  int ProgramPage (unsigned long adr, unsigned long sz, unsigned char *buf) {
+  
+    sz = (sz + 1) & ~1;                           // Adjust size for Half Words
+    
+      while (sz) {
+  
+        FLASH->CR  |=  FLASH_PG;                  // Programming Enabled
+  
+        M16(adr) = *((unsigned short *)buf);      // Program Half Word
+        while (FLASH->SR  & FLASH_BSY);
+  
+        FLASH->CR  &= ~FLASH_PG;                  // Programming Disabled
+  
+        // Check for Errors
+        if (FLASH->SR  & (FLASH_PGERR | FLASH_WRPRTERR)) {
+          FLASH->SR  |= FLASH_PGERR | FLASH_WRPRTERR;
+          return (1);                             // Failed
+        }
+  
+        // Go to next Half Word
+        adr += 2;
+        buf += 2;
+        sz  -= 2;
+      }
+  
+    return (0);                                   // Done
+  }
+  ```
 ##### 2.3.4）生成FLM：  
 
 #### 2.4）SVD:

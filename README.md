@@ -172,8 +172,10 @@
 
 #### 2.3）Flash:
 - 参考文档：
+  - [Pack with Device Support](https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/createPack_DFP.html#:~:text=A%20Software%20Pack%20that%20contains%20a%20%3Cdevices%3E%20element,device%20or%20a%20device%20family%20in%20more%20detail.)
   - [Flash Programming](https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/flashAlgorithm.html)
   - [利用MDK的FLM文件制作通用flash驱动](https://cloud.tencent.com/developer/article/2230443)
+  - [从零编写STM32H7的MDK SPI FLASH下载算法](https://mp.weixin.qq.com/s/IpEG3jN-Nx4Dm1ETxNBkgg)
 - 示例：
 ![loading](asset/flash.png "flash")
 

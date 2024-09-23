@@ -288,7 +288,10 @@
   - [Special Elements](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/elem_special.html)
 - 示例：
   - [SVD File Example](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/svd_Example_pg.html)
-
+  - 顶层元素结构：
+  - ![loading](asset/svd0.png "svd0")
+  - 外设元素结构
+  - ![loading](asset/svd1.png "svd1")
 </details>
 
 ### 3） 生成PACK

@@ -187,7 +187,7 @@
 
 ##### 2.3.1）操作流程：  
 
-- 1）将以下文件复制到你的 Vendor.Device.Version/Flash下
+- 1）将以下文件复制到你的 Vendor.Name.Version/Flash下
   - 一般位于Keil_v5\ARM\Flash\_Template路径下（v540版本）
   - 其中的FlashOS.h位于上级目录（v540版本）
 ![loading](asset/flash0.png "flash0") 
@@ -311,7 +311,7 @@
 <details>
 
 - 脚本介绍：
-  - 检查PDSC文件的可用性、复制PDSC文件到文件目录、在文件目录运行PackChk.exe、在工作目录创建一个包文件。它会被称为 Vendor.Device.Version.pack
+  - 检查PDSC文件的可用性、复制PDSC文件到文件目录、在文件目录运行PackChk.exe、在工作目录创建一个包文件。它会被称为 Vendor.Name.Version.pack
 - 具体步骤：
   - 1）进入DFP文件夹下
   - 2）完善DPSC文件的内容

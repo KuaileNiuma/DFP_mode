@@ -184,6 +184,10 @@
 - 3）修改其中的FlashDev.c和FlashPrg.c文件
 - 4）通过Keil生成FLM文件
 
+##### 2.3.2）修改FlashDev.c：  
+##### 2.3.3）修改FlashPrg.c：  
+##### 2.3.4）生成FLM：  
+
 #### 2.4）SVD:
 
 ![loading](asset/svd.png "svd")

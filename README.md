@@ -178,8 +178,11 @@
 
 - 1）将以下文件复制到你的 Vendor.Device.Version/Flash下
 - 一般位于Keil_v5\ARM\Flash\_Template路径下（v540版本）
+- 其中的FlashOS.h位于上级目录（v540版本）
 ![loading](asset/flash0.png "flash0") 
 - 2）修改其中的三个工程文件，将“NewDevice”替换为你的设备名
+- 3）修改其中的FlashDev.c和FlashPrg.c文件
+- 4）通过Keil生成FLM文件
 
 #### 2.4）SVD:
 

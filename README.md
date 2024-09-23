@@ -281,15 +281,14 @@
 ##### 2.4.2）文件格式:
 - 参考文档：
   - [SVD Description (*.svd) Format](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/svd_Format_pg.html)
-- 示例：
-  - [SVD File Example](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/svd_Example_pg.html)
-- 参考文档
   - [/device element](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/elem_device.html)
   - [/device/cpu element](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/elem_cpu.html)
   - [/device/peripherals element](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/elem_peripherals.html)
   - [/device/peripherals/peripheral/registers element](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/elem_registers.html)
   - [Special Elements](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/elem_special.html)
-  
+- 示例：
+  - [SVD File Example](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/svd_Example_pg.html)
+
 </details>
 
 ### 3） 生成PACK

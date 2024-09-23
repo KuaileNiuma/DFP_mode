@@ -22,7 +22,7 @@
  * limitations under the License.
  */
  
-#include "..\FlashOS.H"        // FlashOS Structures
+#include "FlashOS.H"        // FlashOS Structures
 
 
 struct FlashDevice const FlashDevice  =  {

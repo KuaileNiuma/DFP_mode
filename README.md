@@ -171,6 +171,8 @@
 - 定义设备的外设寄存器映射、位域、内存地址等内容，使开发者可以通过结构体和宏访问设备外设。
 
 #### 2.3）Flash:
+- [Flash Programming]
+(https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/flashAlgorithm.html)
 
 ![loading](asset/flash.png "flash")
 
@@ -203,13 +205,16 @@
        10000,                      // 擦除超时（毫秒）
        
        // 扇区布局
-       {{ 0x08000000, 0x1000 },    // 每个扇区 4KB
-        { 0x08010000, 0x20000 },   // 每个扇区 128KB
-        SECTOR_END }
+       0x08000000, 0x1000,    // 每个扇区 4KB
+       0x08010000, 0x20000,   // 每个扇区 128KB
+       SECTOR_END 
     };
   ```
 
 ##### 2.3.3）修改FlashPrg.c：  
+- 1）介绍：
+  - 
+- 2）示例：
 ##### 2.3.4）生成FLM：  
 
 #### 2.4）SVD:

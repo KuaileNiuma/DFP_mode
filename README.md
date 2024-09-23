@@ -187,7 +187,7 @@
 
 ##### 2.3.1）操作流程：  
 
-- 1）将以下文件复制到你的 Vendor.Name.Version/Flash下
+- 1）将以下文件复制到你的 Vendor.Name/Flash下
   - 一般位于Keil_v5\ARM\Flash\_Template路径下（v540版本）
   - 其中的FlashOS.h位于上级目录（v540版本）
 ![loading](asset/flash0.png "flash0") 

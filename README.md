@@ -304,19 +304,18 @@
 
 ##### 2.4.3）各元素解析:
 
+- device元素解析：
 <details>
-  
+
 | 父级元素 | 元素链 |
 | --- | --- |
 | root | None; Document root（文档根） |
-
 
 | 属性名称 | 描述 | 类型 | 使用 |
 | --- | --- | --- | --- |
 | xmlns:xs | 指定CMSIS-SVD模式符合的底层XML模式。必须设置为："http://www.w3.org/2001/XMLSchema-instance"。 | xs:decimal | 必填 |
 | xs | 指定CMSIS-SVD模式的文件路径和文件名。例如，CMSIS-SVD.xsd。 | xs:string | 必填 |
 | schemaVersion | 指定符合的CMSIS-SVD模式版本（例如，1.1）。 | xs:decimal | 必填 |
-
 
 | 子元素 | 描述 | 类型 | 出现次数 |
 | --- | --- | --- | --- |

@@ -3,7 +3,7 @@
 <package schemaVersion="1.4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
   <vendor>Generic</vendor>
   <url></url>
-  <name>MVCM3_DFP</name>
+  <name>MVCM3</name>
   <description>an example for DFP</description>
 
   <releases>

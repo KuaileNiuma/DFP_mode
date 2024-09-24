@@ -42,25 +42,14 @@
   <version>0.0.1</version>
   <!-- version of this description, adding CMSIS-SVD 1.1 tags -->
   <description>test</description>
-  <licenseText>
-    <!-- this license text will appear in header file. \n force line breaks -->
-    ARM Limited (ARM) is supplying this software for use with Cortex-M\n
-    processor based microcontroller, but can be equally used for other\n
-    suitable  processor architectures. This file can be freely distributed.\n
-    Modifications to this file shall be clearly marked.\n
-    \n
-    THIS SOFTWARE IS PROVIDED "AS IS".  NO WARRANTIES, WHETHER EXPRESS, IMPLIED\n
-    OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF\n
-    MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE.\n
-    ARM SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR\n
-    CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
-  </licenseText>
+  <!-- <licenseText>
+  </licenseText> -->
   <cpu>
     <!-- details about the cpu embedded in the device -->
     <name>CM3</name>
-    <revision>r1p0</revision>
+    <revision>r2p1</revision>
     <endian>little</endian>
-    <mpuPresent>true</mpuPresent>
+    <mpuPresent>false</mpuPresent>
     <fpuPresent>false</fpuPresent>
     <nvicPrioBits>3</nvicPrioBits>
     <vendorSystickConfig>false</vendorSystickConfig>

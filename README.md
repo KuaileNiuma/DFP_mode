@@ -27,6 +27,9 @@
 #### 1.3）文件格式
 
 ##### 1.3.1）结构示例
+
+<details>
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> <!--表示该文件使用 XML 1.0 标准并采用 UTF-8 编码。-->
 
@@ -49,6 +52,9 @@
 
 </package>
 ```
+
+</details>
+
 ##### 1.3.2）关键部分示例：
 <details>
   
@@ -190,6 +196,8 @@
 
 ##### 2.3.1）操作流程：  
 
+<details>
+
 - 1）将以下文件复制到你的 Vendor.Name/Flash下
   - 一般位于Keil_v5\ARM\Flash\_Template路径下（v540版本）
   - 其中的FlashOS.h位于上级目录（v540版本）
@@ -198,7 +206,12 @@
 - 3）修改其中的FlashDev.c和FlashPrg.c文件
 - 4）通过Keil生成FLM文件
 
+</details>
+
 ##### 2.3.2）修改FlashDev.c：  
+
+<details>
+
 - 1）介绍：
   - 定义一个FlashDevice结构体用于描述 Flash 设备的详细特性描述，包括设备的大小、扇区布局、页大小等信息。
   - 为工具提供必要的元数据，以便在进行 Flash 操作（如擦除、编程、读取）时，能够正确处理设备的存储布局。
@@ -223,7 +236,12 @@
     };
   ```
 
+</details>  
+
 ##### 2.3.3）修改FlashPrg.c：  
+
+<details>
+
 - 1）介绍：
   - Keil 环境下的 Flash 编程算法的实现文件，它通过与 Flash 控制器的直接交互来完成擦除、写入、校验等操作。
 - 2）示例：
@@ -254,7 +272,13 @@
       return 0;
   }
   ```
+  
+</details>
+  
 ##### 2.3.4）生成FLM：  
+
+<details>
+
 - 1）打开Flash文件夹的工程
   ![loading](asset/flash1.png "flash1")
 - 2）将输出文件命名为设备名
@@ -270,10 +294,16 @@
 ``` 
 - 5）重新生成pack并导入，在对应的工程中可以看到
   ![loading](asset/flash3.png "表示导入成功")
+
+</details>
+  
 #### 2.4）SVD:
 
 ![loading](asset/svd4.png "架构示意图")
 ##### 2.4.1）介绍:
+
+<details>
+
 - 定义：SVD（System View Description） 文件是 CMSIS（Common Microcontroller Software Interface Standard） 中的定义的一个 XML 格式的纯文本文件，其包含了芯片内核、芯片所具有的外设以及内核和外设的寄存器的完整描述
 - 作用：
   - 生成头文件（device.h）：使用相关工具命令（SVDConv.exe device.svd -o Output -b Output/device.log --generate=header）就可以根据编写的 SVD 文件直接生成芯片的顶级头文件（device.svd --> device.h）
@@ -281,6 +311,8 @@
 - 参考文档：
   - [TIH64 之一 编写 TIH64Vx690 的 SVD 文件及使用 SVD 辅助调试_svd 和 sfr文件的区别](https://blog.csdn.net/zcshoucsdn/article/details/127144450)
   - [System View Description](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/index.html)
+
+</details>
 
 ##### 2.4.2）文件格式:
 
@@ -338,6 +370,12 @@
 | resetMask | 定义哪些寄存器位具有定义的复位值。 | scaledNonNegativeInteger | 0..1 |
 | peripherals | 定义外设的组。 |  | 1..1 |
 | vendorExtensions | 此部分的内容和格式未指定。芯片供应商可以选择提供额外信息。默认情况下，构建CMSIS文件时会忽略此部分。是否为此部分指定模式由芯片供应商决定。 | xs:anyType (限制) | 0..1 |
+
+</details>
+
+- peripherals元素解析：
+
+<details>
 
 </details>
 

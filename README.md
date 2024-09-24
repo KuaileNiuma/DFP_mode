@@ -160,9 +160,8 @@
 
 #### 2.2）Device:
 
-
-
 - 介绍：放置启动文件（startup_device.s）、系统文件（system_device.c system_device.h）、寄存器文件（device.h）以及驱动函数等文件。
+  - 在DFP中，可能拥有多组文件，同一系列各个型号的芯片不一定通用
 - 示例：
   
   ![loading](asset/device.png "device")

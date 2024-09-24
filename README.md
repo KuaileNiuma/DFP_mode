@@ -377,6 +377,15 @@
     ![loading](asset/svd6.png "svd6")
 
 </details>
+
+##### 2.4.3）文件生成:
+
+<details>
+
+- 可参考下列文档
+  -[使用sdk-npi-enablement-tool生成SVD文件和芯片头文件](https://blog.csdn.net/suyong_yq/article/details/128731971) 
+
+</details>
 </details>
 </details>
 

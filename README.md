@@ -342,11 +342,13 @@
 
 ##### 2.4.3）各元素解析:
 
+<details>
+
 - 内容过多，可以参考官方文档
   -  [/device/cpu element](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/elem_cpu.html)
   - 以下是部分内容截图
 
-<details>
+
 
 </details>
 

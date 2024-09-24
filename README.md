@@ -327,8 +327,6 @@
 </details>
 </details>
 
---
-
 #### 2.4）SVD:
 
 ![loading](asset/svd4.png "架构示意图")

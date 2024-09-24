@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- File naming: <part/series name>.svd -->
-
 <!--
   Copyright (C) 2012-2014 ARM Limited. All rights reserved.
 
@@ -32,15 +30,20 @@
   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
   POSSIBILITY OF SUCH DAMAGE.
  -->
- 
-<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd" >
-  <vendor>ARM Ltd.</vendor>                                       <!-- device vendor name -->
-  <vendorID>ARM</vendorID>                                        <!-- device vendor short name -->
-  <name>ARM_Example</name>                                        <!-- name of part-->
-  <series>ARMCM3</series>                                         <!-- device series the device belongs to -->
-  <version>1.2</version>                                          <!-- version of this description, adding CMSIS-SVD 1.1 tags -->
-  <description>ARM 32-bit Cortex-M3 Microcontroller based device, CPU clock up to 80MHz, etc. </description>
-  <licenseText>                                                   <!-- this license text will appear in header file. \n force line breaks -->
+<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd">
+  <vendor>General</vendor>
+  <!-- device vendor name -->
+  <vendorID>5</vendorID>
+  <!-- device vendor short name -->
+  <name>MVCM3110</name>
+  <!-- name of part-->
+  <series>MVCM3</series>
+  <!-- device series the device belongs to -->
+  <version>0.0.1</version>
+  <!-- version of this description, adding CMSIS-SVD 1.1 tags -->
+  <description>test</description>
+  <licenseText>
+    <!-- this license text will appear in header file. \n force line breaks -->
     ARM Limited (ARM) is supplying this software for use with Cortex-M\n
     processor based microcontroller, but can be equally used for other\n
     suitable  processor architectures. This file can be freely distributed.\n
@@ -52,7 +55,8 @@
     ARM SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR\n
     CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
   </licenseText>
-  <cpu>                                                           <!-- details about the cpu embedded in the device -->
+  <cpu>
+    <!-- details about the cpu embedded in the device -->
     <name>CM3</name>
     <revision>r1p0</revision>
     <endian>little</endian>
@@ -61,15 +65,20 @@
     <nvicPrioBits>3</nvicPrioBits>
     <vendorSystickConfig>false</vendorSystickConfig>
   </cpu>
-  <addressUnitBits>8</addressUnitBits>                            <!-- byte addressable memory -->
-  <width>32</width>                                               <!-- bus width is 32 bits -->
+  <addressUnitBits>8</addressUnitBits>
+  <!-- byte addressable memory -->
+  <width>32</width>
+  <!-- bus width is 32 bits -->
   <!-- default settings implicitly inherited by subsequent sections -->
-  <size>32</size>                                                 <!-- this is the default size (number of bits) of all peripherals
+  <size>32</size>
+  <!-- this is the default size (number of bits) of all peripherals
                                                                        and register that do not define "size" themselves -->
-  <access>read-write</access>                                     <!-- default access permission for all subsequent registers -->
-  <resetValue>0x00000000</resetValue>                             <!-- by default all bits of the registers are initialized to 0 on reset -->
-  <resetMask>0xFFFFFFFF</resetMask>                               <!-- by default all 32Bits of the registers are used -->
-
+  <access>read-write</access>
+  <!-- default access permission for all subsequent registers -->
+  <resetValue>0x00000000</resetValue>
+  <!-- by default all bits of the registers are initialized to 0 on reset -->
+  <resetMask>0xFFFFFFFF</resetMask>
+  <!-- by default all 32Bits of the registers are used -->
   <peripherals>
     <!-- Timer 0 -->
     <peripheral>
@@ -80,21 +89,18 @@
       <baseAddress>0x40010000</baseAddress>
       <size>32</size>
       <access>read-write</access>
-
       <addressBlock>
         <offset>0</offset>
         <size>0x100</size>
         <usage>registers</usage>
       </addressBlock>
-
       <interrupt>
         <name>TIMER0</name>
         <description>Timer 0 interrupt</description>
         <value>0</value>
       </interrupt>
-
       <registers>
-      <!-- CR: Control Register -->
+        <!-- CR: Control Register -->
         <register>
           <name>CR</name>
           <description>Control Register</description>
@@ -103,7 +109,6 @@
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <resetMask>0x1337F7F</resetMask>
-
           <fields>
             <!-- EN: Enable -->
             <field>
@@ -124,7 +129,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- RST: Reset -->
             <field>
               <name>RST</name>
@@ -144,7 +148,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- CNT: Counting Direction -->
             <field>
               <name>CNT</name>
@@ -169,7 +172,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- MODE: Operation Mode -->
             <field>
               <name>MODE</name>
@@ -204,7 +206,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- PSC: Use Prescaler -->
             <field>
               <name>PSC</name>
@@ -224,7 +225,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- CNTSRC: Timer / Counter Soruce Divider -->
             <field>
               <name>CNTSRC</name>
@@ -279,7 +279,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- CAPSRC: Timer / COunter Capture Source -->
             <field>
               <name>CAPSRC</name>
@@ -369,7 +368,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- CAPEDGE: Capture Edge -->
             <field>
               <name>CAPEDGE</name>
@@ -394,7 +392,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- TRGEXT: Triggers an other Peripheral -->
             <field>
               <name>TRGEXT</name>
@@ -424,7 +421,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- Reload: Selects Reload Register n -->
             <field>
               <name>RELOAD</name>
@@ -454,7 +450,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- IDR: Inc or dec Reload Register Selection -->
             <field>
               <name>IDR</name>
@@ -479,7 +474,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- START: Starts / Stops the Timer/Counter -->
             <field>
               <name>S</name>
@@ -501,7 +495,6 @@
             </field>
           </fields>
         </register>
-
         <!-- SR: Status Register -->
         <register>
           <name>SR</name>
@@ -511,7 +504,6 @@
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <resetMask>0xD701</resetMask>
-
           <fields>
             <!-- RUN: Shows if Timer is running -->
             <field>
@@ -532,7 +524,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- MATCH: Shows if a Match was hit -->
             <field>
               <name>MATCH</name>
@@ -552,7 +543,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- UN: Shows if an underflow occured -->
             <field>
               <name>UN</name>
@@ -572,7 +562,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- OV: Shows if an overflow occured -->
             <field>
               <name>OV</name>
@@ -592,7 +581,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- RST: Shows if Timer is in RESET state -->
             <field>
               <name>RST</name>
@@ -612,7 +600,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- RELOAD: Shows the currently active Reload Register -->
             <field>
               <name>RELOAD</name>
@@ -644,7 +631,6 @@
             </field>
           </fields>
         </register>
-
         <!-- INT: Interrupt Register -->
         <register>
           <name>INT</name>
@@ -654,7 +640,6 @@
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>
           <resetMask>0x0771</resetMask>
-
           <fields>
             <!-- EN: Interrupt Enable -->
             <field>
@@ -675,7 +660,6 @@
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-
             <!-- MODE: Interrupt Mode -->
             <field>
               <name>MODE</name>
@@ -702,7 +686,6 @@
             </field>
           </fields>
         </register>
-
         <!-- COUNT: Counter Register -->
         <register>
           <name>COUNT</name>
@@ -713,7 +696,6 @@
           <resetValue>0x00000000</resetValue>
           <resetMask>0xFFFFFFFF</resetMask>
         </register>
-
         <!-- MATCH: Match Register -->
         <register>
           <name>MATCH</name>
@@ -724,7 +706,6 @@
           <resetValue>0x00000000</resetValue>
           <resetMask>0xFFFFFFFF</resetMask>
         </register>
-        
         <!-- PRESCALE: Prescale Read Register -->
         <register>
           <name>PRESCALE_RD</name>
@@ -735,7 +716,6 @@
           <resetValue>0x00000000</resetValue>
           <resetMask>0xFFFFFFFF</resetMask>
         </register>
-        
         <!-- PRESCALE: Prescale Write Register -->
         <register>
           <name>PRESCALE_WR</name>
@@ -746,8 +726,6 @@
           <resetValue>0x00000000</resetValue>
           <resetMask>0xFFFFFFFF</resetMask>
         </register>
-
-
         <!-- RELOAD: Array of Reload Register with 4 elements-->
         <register>
           <dim>4</dim>
@@ -762,7 +740,6 @@
         </register>
       </registers>
     </peripheral>
-
     <!-- Timer 1 -->
     <peripheral derivedFrom="TIMER0">
       <name>TIMER1</name>
@@ -773,7 +750,6 @@
         <value>4</value>
       </interrupt>
     </peripheral>
-
     <!-- Timer 2 -->
     <peripheral derivedFrom="TIMER0">
       <name>TIMER2</name>

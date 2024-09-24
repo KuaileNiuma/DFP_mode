@@ -189,7 +189,11 @@
 - 定义设备的外设寄存器映射、位域、内存地址等内容，使开发者可以通过结构体和宏访问设备外设。
 - 可以通过CMSIS提供的SVDConv工具依据你的SVD文件直接生成
 - SVDConv的使用：
-  - SVDConv ARM_Example.svd --generate=header --fields=struct
+  - 调用示例：SVDConv MVCM3.svd --generate=header --fields=struct
+  - SVDConv: 表示调用 SVDConv 工具。这个工具通常是在安装 CMSIS 之后可用。确保在命令行中可以访问它（即它的路径已被添加到环境变量中）。
+  - MVCM3.svd: 这是输入的 SVD 文件，包含了设备寄存器的描述信息。此文件需要位于当前工作目录中或者使用完整的文件路径。
+  - --generate=header: 指定生成 C 头文件。默认情况下，它会将 SVD 文件中的寄存器描述转换为 C 结构体表示的头文件。
+  - --fields=struct: 这个选项表示在生成头文件时，将寄存器字段表示为结构体。这意味着每个寄存器字段都会被分解为更小的结构体单元。
 
 </details>
 

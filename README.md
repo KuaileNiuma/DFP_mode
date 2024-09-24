@@ -305,7 +305,54 @@
 ##### 2.4.3）各元素解析:
 
 <details>
-  
+
+###### 元素链
+
+####### 父级元素
+
+| 元素链 | 描述 |
+| --- | --- |
+| root | None; Document root（文档根） |
+
+####### 属性
+
+| 属性名称 | 描述 | 类型 | 使用 |
+| --- | --- | --- | --- |
+| xmlns:xs | 指定CMSIS-SVD模式符合的底层XML模式。必须设置为："http://www.w3.org/2001/XMLSchema-instance"。 | xs:decimal | 必填 |
+| xmlns:xs | 指定CMSIS-SVD模式的文件路径和文件名。例如，CMSIS-SVD.xsd。 | xs:string | 必填 |
+| schemaVersion | 指定符合的CMSIS-SVD模式版本（例如，1.1）。 | xs:decimal | 必填 |
+
+####### 子元素
+
+| 子元素 | 描述 | 类型 | 出现次数 |
+| --- | --- | --- | --- |
+| vendor | 指定设备的供应商名称。 | xs:string | 0..1 |
+| vendorID | 指定没有空格或特殊字符的供应商缩写。此信息用于定义目录。 | xs:string | 0..1 |
+| name | 标识设备或设备系列的字符串。设备名称必须唯一。 | xs:string | 1..1 |
+| series | 指定设备系列的名称。 | xs:string | 0..1 |
+| version | 定义SVD文件的版本。芯片供应商在设备生命周期内维护描述，并确保所有更新和发布的副本具有唯一的版本字符串。较大的数字表示较新的版本。 | xs:string | 1..1 |
+| description | 描述设备的主要功能（例如CPU、时钟频率、外设概述）。 | xs:string | 1..1 |
+| licenseText | 此文本将复制到生成的设备头文件的头部部分，并应包含法律免责声明。可以通过使用 \n 插入新行。如果SVD文件用于生成设备头文件，则此部分为必填项。 | xs:string | 0..1 |
+| cpu | 描述设备中包含的处理器。 | xs:string | 0..1 |
+| headerSystemFilename | 指定设备特定系统包含文件的文件名（不带扩展名）（system_<device>.h；参见CMSIS-Core描述）。头文件生成器定制引用CMSIS系统文件的include语句，默认文件名为system_device-name.h。在设备系列共享单个系统头文件的情况下，应使用系列名称而不是单个设备名称。 | xs:string | 0..1 |
+| headerDefinitionsPrefix | 该字符串将添加到在CMSIS-Core设备头文件中生成的所有类型定义名称之前。如果供应商的软件需要特定于供应商的类型以避免与其他定义的类型冲突时使用此选项。 | xs:string | 0..1 |
+| addressUnitBits | 定义每个地址唯一选择的数据位数。对于基于Cortex-M的设备，该值为8（字节地址）。 | scaledNonNegativeInteger | 1..1 |
+| width | 定义总线结构支持的最大单次数据传输的数据位宽度。这些信息对于调试器在访问寄存器时很重要，因为对于更大尺寸的资源可能需要进行多次访问。对于基于Cortex-M的设备，预期值为32。 | scaledNonNegativeInteger | 1..1 |
+
+####### 其他元素
+
+######## 注册属性组的详细信息
+
+| 元素 | 描述 | 类型 | 出现次数 |
+| --- | --- | --- | --- |
+| size | 默认位宽度，适用于设备中包含的任何寄存器。 | scaledNonNegativeInteger | 0..1 |
+| access | 所有寄存器的默认访问权限。 | accessType | 0..1 |
+| protection | 所有寄存器的默认访问保护。 | protectionStringType | 0..1 |
+| resetValue | 所有寄存器在复位时的默认值。 | scaledNonNegativeInteger | 0..1 |
+| resetMask | 定义哪些寄存器位具有定义的复位值。 | scaledNonNegativeInteger | 0..1 |
+| peripherals | 定义外设的组。 |  | 1..1 |
+| vendorExtensions | 此部分的内容和格式未指定。芯片供应商可以选择提供额外信息。默认情况下，构建CMSIS文件时会忽略此部分。是否为此部分指定模式由芯片供应商决定。 | xs:anyType (限制) | 0..1 |
+
 </details>
 
 </details>

@@ -26,6 +26,8 @@
 
 #### 1.3）文件格式
 
+<details>
+
 ##### 1.3.1）结构示例
 
 <details>
@@ -147,6 +149,7 @@
 
 </details>
 </details>
+</details>
 
 ### 2） DFP文件结构  
 <details>  
@@ -199,6 +202,8 @@
   - [从零编写STM32H7的MDK SPI FLASH下载算法](https://mp.weixin.qq.com/s/IpEG3jN-Nx4Dm1ETxNBkgg)
 - 示例：
 ![loading](asset/flash.png "flash")
+
+<details>
 
 ##### 2.3.1）操作流程：  
 
@@ -302,10 +307,14 @@
   ![loading](asset/flash3.png "表示导入成功")
 
 </details>
-  
+</details>
+
 #### 2.4）SVD:
 
 ![loading](asset/svd4.png "架构示意图")
+
+<details>
+
 ##### 2.4.1）介绍:
 
 <details>
@@ -352,7 +361,7 @@
     ![loading](asset/svd6.png "svd6")
 
 </details>
-
+</details>
 </details>
 
 ### 3） 生成PACK

@@ -1,34 +1,58 @@
 # DFP_Mode
 - 本人学习过程中的总结，有问题欢迎大家指出
 
-
+1. [DFP 的创建](#dfp-的创建)
+   - [1. 介绍与准备工作](#1-PDSC 文件)
+     - [1.1 DFP 介绍](#11--介绍)
+     - [1.2 基础文档与参考链接](#12-基础文档与参考链接)
+   - [2. PDSC 文件](#2-pdsc-文件)
+     - [2.1 PDSC 文件的基础结构](#21-pdsc-文件的基础结构)
+     - [2.2 文件结构示例](#22-文件结构示例)
+     - [2.3 关键部分示例](#23-关键部分示例)
+   - [3. DFP 文件结构](#3-dfp-文件结构)
+     - [3.1 示例结构](#31-示例结构)
+     - [3.2 Device 文件夹](#32-device-文件夹)
+       - [3.2.1 startup_device.s](#321-startup_devices)
+       - [3.2.2 system_device.c](#322-system_devicec)
+       - [3.2.3 system_device.h](#323-system_deviceh)
+       - [3.2.4 device.h](#324-deviceh)
+     - [3.3 Flash 文件夹](#33-flash-文件夹)
+       - [3.3.1 修改 FlashDev.c](#331-修改-flashdevc)
+       - [3.3.2 修改 FlashPrg.c](#332-修改-flashprgc)
+       - [3.3.3 生成 FLM 文件](#333-生成-flm-文件)
+     - [3.4 SVD 文件夹](#34-svd-文件夹)
+       - [3.4.1 SVD 文件介绍](#341-svd-文件介绍)
+       - [3.4.2 SVD 文件格式与示例](#342-svd-文件格式与示例)
+   - [4. 生成 PACK](#4-生成-pack)
+     - [4.1 Pack 生成脚本](#41-pack-生成脚本)
+     - [4.2 生成步骤](#42-生成步骤
   
 ## DFP 的创建
 
 ### 1） .PDSC 文件
 <details>
   
-#### 1.0）介绍
+#### 1.1）介绍
 
 - CMSIS Pack 描述文件（Pack Description File）是 CMSIS-Pack 系统中的核心文件，用于描述和定义一个设备家族包（DFP, Device Family Pack）或其他软件包的内容和结构。
 - 它通过 XML 格式来表达，包含关于设备、组件、库、驱动程序、示例代码等的信息，并为开发工具（如 Keil MDK、IAR 等）提供用于集成和管理这些资源的元数据。
 
-#### 1.1）参考文档
+#### 1.2）参考文档
 
 - [CMSIS-Pack Components Documentation](https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/cp_SWComponents.html)
 - [CMSIS-Pack DFP Creation Guide](https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/createPack_DFP.html#:~:text=A%20Software%20Pack%20that%20contains%20a%20%3Cdevices%3E%20element,device%20or%20a%20device%20family%20in%20more%20detail.)
 
-#### 1.2）命名格式
+#### 1.3）命名格式
 
 - `Vendor.Name.pdsc`
 - `Vendor` 为供应商名，在 `PACK.xsd` 中有登记，开发过程中使用“Generic:5”代替。
 - `Name` 为家族名，如芯片 MVCM3 包含 MVCM3100 和 MVCM3200，则 `Name` 为 MVCM3。
 
-#### 1.3）文件格式
+#### 1.4）文件格式
 
 <details>
 
-##### 1.3.1）结构示例
+##### 1.4.1）结构示例
 
 <details>
 
@@ -57,7 +81,7 @@
 
 </details>
 
-##### 1.3.2）关键部分示例：
+##### 1.4.2）关键部分示例：
 <details>
   
 - 在下面的部分中，将为来自设备供应商MyVendor的虚拟设备族MVCM3创建DFP。

@@ -194,15 +194,15 @@
   - --generate=header: 指定生成 C 头文件。默认情况下，它会将 SVD 文件中的寄存器描述转换为 C 结构体表示的头文件。
   - --fields=struct: 这个选项表示在生成头文件时，将寄存器字段表示为结构体。这意味着每个寄存器字段都会被分解为更小的结构体单元。
 
-##### 2.2.5）Peripherals_Driver：
+##### 2.2.5）Driver：
 - 该文件夹下存放芯片的外设驱动，并在PDSC文件中声明，如下：
 
 ```xml
-    <component Cclass="Device" Cgroup="Peripheral Driver" Csub="I2C" Cversion="0.0.1" >
+    <component Cclass="Device" Cgroup="Driver" Csub="I2C" Cversion="0.0.1" >
       <description>example</description>
       <files>
-        <file category="header" name="Device/Peripheral_Drivers/Include/MVCM3_i2c.h"/>
-        <file category="source" name="Device/Peripheral_Drivers/Source/MVCM3_i2c.c"/>
+        <file category="header" name="Device/Driver/Include/Driver_CAN.h"/>
+        <file category="source" name="Device/Driver/Source/Driver_CAN.c"/>
       </files>
     </component>
 ```

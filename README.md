@@ -305,24 +305,18 @@
 ##### 2.4.3）各元素解析:
 
 <details>
-
-- 元素链
-
-- 父级元素
-
-| 元素链 | 描述 |
+  
+| 父级元素 | 元素链 |
 | --- | --- |
 | root | None; Document root（文档根） |
 
-- 属性
 
 | 属性名称 | 描述 | 类型 | 使用 |
 | --- | --- | --- | --- |
 | xmlns:xs | 指定CMSIS-SVD模式符合的底层XML模式。必须设置为："http://www.w3.org/2001/XMLSchema-instance"。 | xs:decimal | 必填 |
-| xmlns:xs | 指定CMSIS-SVD模式的文件路径和文件名。例如，CMSIS-SVD.xsd。 | xs:string | 必填 |
+| xs | 指定CMSIS-SVD模式的文件路径和文件名。例如，CMSIS-SVD.xsd。 | xs:string | 必填 |
 | schemaVersion | 指定符合的CMSIS-SVD模式版本（例如，1.1）。 | xs:decimal | 必填 |
 
-- 子元素
 
 | 子元素 | 描述 | 类型 | 出现次数 |
 | --- | --- | --- | --- |
@@ -338,13 +332,6 @@
 | headerDefinitionsPrefix | 该字符串将添加到在CMSIS-Core设备头文件中生成的所有类型定义名称之前。如果供应商的软件需要特定于供应商的类型以避免与其他定义的类型冲突时使用此选项。 | xs:string | 0..1 |
 | addressUnitBits | 定义每个地址唯一选择的数据位数。对于基于Cortex-M的设备，该值为8（字节地址）。 | scaledNonNegativeInteger | 1..1 |
 | width | 定义总线结构支持的最大单次数据传输的数据位宽度。这些信息对于调试器在访问寄存器时很重要，因为对于更大尺寸的资源可能需要进行多次访问。对于基于Cortex-M的设备，预期值为32。 | scaledNonNegativeInteger | 1..1 |
-
-- 其他元素
-
-- 注册属性组的详细信息
-
-| 元素 | 描述 | 类型 | 出现次数 |
-| --- | --- | --- | --- |
 | size | 默认位宽度，适用于设备中包含的任何寄存器。 | scaledNonNegativeInteger | 0..1 |
 | access | 所有寄存器的默认访问权限。 | accessType | 0..1 |
 | protection | 所有寄存器的默认访问保护。 | protectionStringType | 0..1 |

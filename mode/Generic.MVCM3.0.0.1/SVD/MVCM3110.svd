@@ -35,7 +35,7 @@
   <!-- device vendor name -->
   <vendorID>5</vendorID>
   <!-- device vendor short name -->
-  <name>MVCM3</name>
+  <name>MVCM3110</name>
   <!-- name of part-->
   <series>MVCM3</series>
   <!-- device series the device belongs to -->

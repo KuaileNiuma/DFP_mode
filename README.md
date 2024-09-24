@@ -72,7 +72,7 @@
     <url></url>                         <!--定义包的下载路径（若为空则Pack Installer显示Offline）-->
     <description></description>         <!--描述-->
     <supportContact></supportContact>   <!--联系方式联系方式-->
-    <license>Docs/license.txt</license> <!--许可文件-->
+    <license></license> <!--许可文件-->
     <releases></releases>               <!--发行的版本日期等信息-->
     <keywords></keywords>               <!--搜索用关键词-->
 

@@ -382,7 +382,7 @@
 
 <details>
 
-- 可参考下列文档（但是目前还没找到这个工具包）
+- 可参考下列文档（但是目前还没找到这个工具包）  
   -[使用sdk-npi-enablement-tool生成SVD文件和芯片头文件](https://blog.csdn.net/suyong_yq/article/details/128731971) 
 
 </details>

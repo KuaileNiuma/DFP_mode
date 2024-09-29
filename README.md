@@ -368,7 +368,7 @@
 - 定义：SVD（System View Description） 文件是 CMSIS（Common Microcontroller Software Interface Standard） 中的定义的一个 XML 格式的纯文本文件，其包含了芯片内核、芯片所具有的外设以及内核和外设的寄存器的完整描述
 - 作用：
   - 生成头文件（device.h）：使用相关工具命令（SVDConv.exe device.svd -o Output -b Output/device.log --generate=header）就可以根据编写的 SVD 文件直接生成芯片的顶级头文件（device.svd --> device.h）
-  - 调试 ：SVD 文件最主要的目的是调试时直接显示寄存器的每个比特位的状态。
+  - 方便调试 ：调试模式下，不用去memory窗口输入地址查看寄存器信息。
 - 参考文档：
   - [TIH64 之一 编写 TIH64Vx690 的 SVD 文件及使用 SVD 辅助调试_svd 和 sfr文件的区别](https://blog.csdn.net/zcshoucsdn/article/details/127144450)
   - [System View Description](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/index.html)

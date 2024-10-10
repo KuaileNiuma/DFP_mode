@@ -76,9 +76,9 @@
     <releases></releases>               <!--发行的版本日期等信息-->
     <keywords></keywords>               <!--搜索用关键词-->
 
-    <devices></devices>                 <!--见1.32)-->
-    <conditions></conditions>           <!--见1.32)-->
-    <components></components>           <!--见1.32)-->
+    <devices></devices>                 <!--见1.42)-->
+    <conditions></conditions>           <!--见1.42)-->
+    <components></components>           <!--见1.42)-->
 
 </package>
 ```
@@ -246,8 +246,9 @@
   - [Flash Programming](https://www.keil.com/pack/doc/CMSIS_Dev/Pack/html/flashAlgorithm.html)
   - [利用MDK的FLM文件制作通用flash驱动](https://cloud.tencent.com/developer/article/2230443)
   - [从零编写STM32H7的MDK SPI FLASH下载算法](https://mp.weixin.qq.com/s/IpEG3jN-Nx4Dm1ETxNBkgg)
-- 示例：
-![loading](asset/flash.png "flash")
+- 示例： 
+  
+  ![loading](asset/flash.png "flash")
 
 <details>
 
@@ -336,9 +337,9 @@
 
 <details>
 
-- 1）打开Flash文件夹的工程
+- 1）打开Flash文件夹的工程  
   ![loading](asset/flash1.png "flash1")
-- 2）将输出文件命名为设备名
+- 2）将输出文件命名为设备名  
   ![loading](asset/flash2.png "flash2")
 - 3）编译
 - 4）在PDSC文件中添加FLM文件的路径,如下：
@@ -349,7 +350,7 @@
   <memory     name="IRAM1"  access="rw"       start="0x20000000"  size="0x0800"     init   ="0"   default="1"/>
 </device>
 ``` 
-- 5）重新生成pack并导入，在对应的工程中可以看到
+- 5）重新生成pack并导入，在对应的工程中可以看到  
   ![loading](asset/flash3.png "表示导入成功")
 
 </details>
@@ -368,7 +369,7 @@
 - 定义：SVD（System View Description） 文件是 CMSIS（Common Microcontroller Software Interface Standard） 中的定义的一个 XML 格式的纯文本文件，其包含了芯片内核、芯片所具有的外设以及内核和外设的寄存器的完整描述
 - 作用：
   - 生成头文件（device.h）：使用相关工具命令（SVDConv.exe device.svd -o Output -b Output/device.log --generate=header）就可以根据编写的 SVD 文件直接生成芯片的顶级头文件（device.svd --> device.h）
-  - 调试 ：SVD 文件最主要的目的是调试时直接显示寄存器的每个比特位的状态。
+  - 方便调试 ：调试模式下，不用去memory窗口输入地址查看寄存器信息。
 - 参考文档：
   - [TIH64 之一 编写 TIH64Vx690 的 SVD 文件及使用 SVD 辅助调试_svd 和 sfr文件的区别](https://blog.csdn.net/zcshoucsdn/article/details/127144450)
   - [System View Description](https://www.keil.com/pack/doc/CMSIS_Dev/SVD/html/index.html)

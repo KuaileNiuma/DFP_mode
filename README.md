@@ -76,9 +76,9 @@
     <releases></releases>               <!--发行的版本日期等信息-->
     <keywords></keywords>               <!--搜索用关键词-->
 
-    <devices></devices>                 <!--见1.32)-->
-    <conditions></conditions>           <!--见1.32)-->
-    <components></components>           <!--见1.32)-->
+    <devices></devices>                 <!--见1.42)-->
+    <conditions></conditions>           <!--见1.42)-->
+    <components></components>           <!--见1.42)-->
 
 </package>
 ```

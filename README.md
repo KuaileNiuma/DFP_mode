@@ -337,9 +337,9 @@
 
 <details>
 
-- 1）打开Flash文件夹的工程
+- 1）打开Flash文件夹的工程  
   ![loading](asset/flash1.png "flash1")
-- 2）将输出文件命名为设备名
+- 2）将输出文件命名为设备名  
   ![loading](asset/flash2.png "flash2")
 - 3）编译
 - 4）在PDSC文件中添加FLM文件的路径,如下：
@@ -350,7 +350,7 @@
   <memory     name="IRAM1"  access="rw"       start="0x20000000"  size="0x0800"     init   ="0"   default="1"/>
 </device>
 ``` 
-- 5）重新生成pack并导入，在对应的工程中可以看到
+- 5）重新生成pack并导入，在对应的工程中可以看到  
   ![loading](asset/flash3.png "表示导入成功")
 
 </details>
